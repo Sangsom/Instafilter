@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="bottom" secondItem="VVP-1g-7eG" secondAttribute="bottom" constant="10" id="rcc-6Q-j3X"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-8r-JOA">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-8r-JOA" userLabel="Intensity Slider View">
                                 <rect key="frame" x="10" y="574" width="394" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDi-j6-jmx">
@@ -48,6 +48,19 @@
                                     </slider>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="HMa-wi-VLC" userLabel="Buttons View">
+                                <rect key="frame" x="8" y="614" width="398" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8H-4S-ThX">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <state key="normal" title="Change Filter"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-Wf-kbC">
+                                        <rect key="frame" x="364" y="0.0" width="34" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,8 +68,11 @@
                             <constraint firstItem="uoQ-md-rcm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ECh-x1-9QG"/>
                             <constraint firstItem="gRW-8r-JOA" firstAttribute="top" secondItem="uoQ-md-rcm" secondAttribute="bottom" constant="16" id="EIa-we-Xyr"/>
                             <constraint firstItem="gRW-8r-JOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="R9b-rJ-xfF"/>
+                            <constraint firstItem="HMa-wi-VLC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="cBe-rn-Dyn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HMa-wi-VLC" secondAttribute="trailing" constant="8" id="hv5-fl-MCM"/>
                             <constraint firstItem="uoQ-md-rcm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iOc-TO-Ct9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uoQ-md-rcm" secondAttribute="trailing" id="kOd-fI-cwo"/>
+                            <constraint firstItem="HMa-wi-VLC" firstAttribute="top" secondItem="gRW-8r-JOA" secondAttribute="bottom" constant="10" id="sJx-wm-gmp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -64,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="783"/>
+            <point key="canvasLocation" x="1037.68115942029" y="782.8125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0FH-t4-cze">
