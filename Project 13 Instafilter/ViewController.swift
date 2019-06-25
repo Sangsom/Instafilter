@@ -13,7 +13,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var intensity: UISlider!
-
+    @IBOutlet var radius: UISlider!
+    
     var currentImage: UIImage!
     var context: CIContext!
     var currentFilter: CIFilter!
@@ -76,6 +77,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         applyProcessing()
     }
 
+    @IBAction func radiusChanged(_ sender: UISlider) {
+        applyProcessing()
+    }
+
     @objc func importPicture() {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
@@ -100,7 +105,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
         }
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
         }
         if inputKeys.contains(kCIInputScaleKey) {
             currentFilter.setValue(intensity.value * 10, forKey: kCIInputScaleKey)

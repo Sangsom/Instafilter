@@ -34,25 +34,42 @@
                                     <constraint firstAttribute="bottom" secondItem="VVP-1g-7eG" secondAttribute="bottom" constant="10" id="rcc-6Q-j3X"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-8r-JOA" userLabel="Intensity Slider View">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-8r-JOA" userLabel="Intensity Slider View">
                                 <rect key="frame" x="10" y="574" width="394" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDi-j6-jmx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDi-j6-jmx">
                                         <rect key="frame" x="0.0" y="0.0" width="65.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kRC-77-u1l">
-                                        <rect key="frame" x="99.5" y="0.0" width="296.5" height="31"/>
+                                        <rect key="frame" x="73.5" y="0.0" width="322.5" height="31"/>
                                         <connections>
                                             <action selector="intensityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5zS-l1-diO"/>
                                         </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0OX-Ps-plv" userLabel="Radius Slider View">
+                                <rect key="frame" x="10" y="620" width="394" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJE-e4-uTF">
+                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="53b-DK-Vyp" userLabel="Radius">
+                                        <rect key="frame" x="73.5" y="0.0" width="322.5" height="31"/>
+                                        <connections>
+                                            <action selector="radiusChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BLW-JZ-v46"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="HMa-wi-VLC" userLabel="Buttons View">
-                                <rect key="frame" x="8" y="614" width="398" height="30"/>
+                                <rect key="frame" x="8" y="666" width="398" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8H-4S-ThX">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
@@ -76,12 +93,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRW-8r-JOA" secondAttribute="trailing" constant="10" id="2zv-Zn-Egf"/>
                             <constraint firstItem="uoQ-md-rcm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ECh-x1-9QG"/>
                             <constraint firstItem="gRW-8r-JOA" firstAttribute="top" secondItem="uoQ-md-rcm" secondAttribute="bottom" constant="16" id="EIa-we-Xyr"/>
+                            <constraint firstItem="WDi-j6-jmx" firstAttribute="width" secondItem="lJE-e4-uTF" secondAttribute="width" id="FRf-7b-aBW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0OX-Ps-plv" secondAttribute="trailing" constant="10" id="JtA-XI-eHv"/>
                             <constraint firstItem="gRW-8r-JOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="R9b-rJ-xfF"/>
+                            <constraint firstItem="0OX-Ps-plv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Tgq-cK-XnJ"/>
                             <constraint firstItem="HMa-wi-VLC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="cBe-rn-Dyn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HMa-wi-VLC" secondAttribute="trailing" constant="8" id="hv5-fl-MCM"/>
+                            <constraint firstItem="0OX-Ps-plv" firstAttribute="top" secondItem="gRW-8r-JOA" secondAttribute="bottom" constant="16" id="iLI-eD-Gao"/>
                             <constraint firstItem="uoQ-md-rcm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iOc-TO-Ct9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uoQ-md-rcm" secondAttribute="trailing" id="kOd-fI-cwo"/>
-                            <constraint firstItem="HMa-wi-VLC" firstAttribute="top" secondItem="gRW-8r-JOA" secondAttribute="bottom" constant="10" id="sJx-wm-gmp"/>
+                            <constraint firstItem="HMa-wi-VLC" firstAttribute="top" secondItem="0OX-Ps-plv" secondAttribute="bottom" constant="16" id="sJx-wm-gmp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -89,6 +110,7 @@
                     <connections>
                         <outlet property="imageView" destination="VVP-1g-7eG" id="uBv-8A-7KA"/>
                         <outlet property="intensity" destination="kRC-77-u1l" id="Pgy-2s-7Eh"/>
+                        <outlet property="radius" destination="53b-DK-Vyp" id="VEe-Wy-QjX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
