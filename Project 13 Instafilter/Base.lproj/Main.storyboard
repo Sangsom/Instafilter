@@ -34,10 +34,27 @@
                                     <constraint firstAttribute="bottom" secondItem="VVP-1g-7eG" secondAttribute="bottom" constant="10" id="rcc-6Q-j3X"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-8r-JOA">
+                                <rect key="frame" x="10" y="574" width="394" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDi-j6-jmx">
+                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kRC-77-u1l">
+                                        <rect key="frame" x="99.5" y="0.0" width="296.5" height="31"/>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRW-8r-JOA" secondAttribute="trailing" constant="10" id="2zv-Zn-Egf"/>
                             <constraint firstItem="uoQ-md-rcm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ECh-x1-9QG"/>
+                            <constraint firstItem="gRW-8r-JOA" firstAttribute="top" secondItem="uoQ-md-rcm" secondAttribute="bottom" constant="16" id="EIa-we-Xyr"/>
+                            <constraint firstItem="gRW-8r-JOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="R9b-rJ-xfF"/>
                             <constraint firstItem="uoQ-md-rcm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iOc-TO-Ct9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uoQ-md-rcm" secondAttribute="trailing" id="kOd-fI-cwo"/>
                         </constraints>
