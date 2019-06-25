@@ -72,13 +72,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     func applyProcessing() {
-        guard let image = currentFilter.outputImage else { return }
-        currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
+        let inputKeys = currentFilter.inputKeys
 
-        if let cgimg = context.createCGImage(image, from: image.extent) {
-            let processedImage = UIImage(cgImage: cgimg)
-            imageView.image = processedImage
+        if inputKeys.contains(kCIInputIntensityKey) {
+            currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
         }
+        if inputKeys.contains(kCIInputRadiusKey) {
+            currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+        }
+        if inputKeys.contains(kCIInputScaleKey) {
+            currentFilter.setValue(intensity.value * 10, forKey: kCIInputScaleKey)
+        }
+        if inputKeys.contains(kCIInputCenterKey) {
+            currentFilter.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey)
+        }
+
+        if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
+            let processedImage = UIImage(cgImage: cgimg)
+            self.imageView.image = processedImage
+        }
+    }
+
+    func setFilter(action: UIAlertAction) {
+        // make sure we have a valid image before continuing!
+        guard currentImage != nil else { return }
+
+        // safely read the alert action's title
+        guard let actionTilte = action.title else { return }
+
+        currentFilter = CIFilter(name: actionTilte)
+
+        let beginImage = CIImage(image: currentImage)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+
+        applyProcessing()
     }
 }
 
